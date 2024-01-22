@@ -1,9 +1,9 @@
 <component name="ProjectRunConfigurationManager">
-  <configuration default="false" name="CourseDB Configuration" type="docker-deploy" factoryName="docker-image" server-name="Docker">
+  <configuration default="false" name="SchoolDB Configuration" type="docker-deploy" factoryName="docker-image" server-name="Docker">
     <deployment type="docker-image">
       <settings>
         <option name="imageTag" value="mysql:latest" />
-        <option name="containerName" value="CourseDB" />
+        <option name="containerName" value="SchoolDB" />
         <option name="envVars">
           <list>
             <DockerEnvVarImpl>
@@ -22,6 +22,14 @@
               <option name="containerPort" value="3306" />
               <option name="hostPort" value="3306" />
             </DockerPortBindingImpl>
+          </list>
+        </option>
+        <option name="volumeBindings">
+          <list>
+            <DockerVolumeBindingImpl>
+              <option name="containerPath" value="/var/lib/mysql" />
+              <option name="hostPath" value="C:\Users\Roma\Desktop\Разработчик\1 четверть\24. Java Junior\Семинары. Урок 4. Базы данных и инструменты взаимодействия с ними\JavaJunSem4\.containers\database" />
+            </DockerVolumeBindingImpl>
           </list>
         </option>
       </settings>

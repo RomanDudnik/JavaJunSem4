@@ -5,7 +5,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class Program {
+public class ProgHib {
 
     /**
      * Создайте базу данных (например, SchoolDB).
@@ -18,7 +18,7 @@ public class Program {
     public static void main(String[] args) {
         // Создание фабрики сессий
         SessionFactory sessionFactory = new Configuration()
-                .configure("hibernate.cfg.xml")
+                .configure("hibernate1.cfg.xml")
                 .addAnnotatedClass(Course.class)
                 .buildSessionFactory();
 
@@ -29,14 +29,14 @@ public class Program {
             session.beginTransaction();
 
             // Создание объекта
-            Course student = Course.create();
+            Course course = Course.create();
 
             // Сохранение объекта в базе данных
-            session.save(student);
+            session.save(course);
             System.out.println("Object course save successfully");
 
             // Чтение объекта из базы данных
-            Course retrievedCourse = session.get(Course.class, student.getId());
+            Course retrievedCourse = session.get(Course.class, course.getId());
             System.out.println("Object course retrieved successfully");
             System.out.println("Retrieved course object: " + retrievedCourse);
 
@@ -46,9 +46,9 @@ public class Program {
             session.update(retrievedCourse);
             System.out.println("Object course update successfully");
 
-             //Удаление объекта
-            session.delete(retrievedCourse);
-            System.out.println("Object student delete successfully");
+//             //Удаление объекта
+//            session.delete(retrievedCourse);
+//            System.out.println("Object student delete successfully");
 
             // Коммит транзакции
             session.getTransaction().commit();
