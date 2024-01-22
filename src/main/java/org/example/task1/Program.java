@@ -64,10 +64,10 @@ public class Program {
             }
             System.out.println("Update data successfully");
 
-            // Удаление данных
-            for (var student: students)
-                deleteData(connection, student.getId());
-            System.out.println("Delete data successfully");
+//            // Удаление данных
+//            for (var student: students)
+//                deleteData(connection, student.getId());
+//            System.out.println("Delete data successfully");
 
             // Закрытие соединения
             connection.close();
