@@ -4,6 +4,7 @@ import javax.persistence.*;
 import java.util.Random;
 
 // анотации для связи с таблицей в базе (маппинг с hibernate):
+// resources/hibernate.cfg.xml
 @Entity                         // сущность класса Student в базе данных
 @Table(name = "students")       // указатель на конкретную таблицу
 public class Student {
