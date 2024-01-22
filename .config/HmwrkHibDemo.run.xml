@@ -1,0 +1,9 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="HmwrkHibDemo" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="org.example.HmwrkTask.Program" />
+    <module name="JavaJunSem4" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
